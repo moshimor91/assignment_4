@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+      <title>Book collection</title>
+      <%= stylesheet_link_tag('admin', :media => 'all')%>
+  </head>
+
+  <body>
+  <div id="main">
+
+  <%if !flash[:notice].blank?%>
+    <div class = "notice">
+        <%= flash[:notice]%>
+    <div>
+  <%end%>
+  <div id = "content">
+    <%= yield %>
+  </div>
+  </div>
+
+  </body>
+</html>

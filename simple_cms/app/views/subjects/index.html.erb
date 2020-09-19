@@ -1,0 +1,28 @@
+
+
+<div class="subjects index">
+  <h2>Book List</h2>
+
+  <%= link_to("Add New Book", new_subject_path, :class => 'action new') %>
+
+  <table class="listing" summary="Subject list">
+    <tr class="header">
+      <th>#</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Actions</th>
+    </tr>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.id %></td>
+        <td><%= book.title %></td>
+        <td><%= book.author %></td>
+        <td class="actions">
+          <%= link_to("Show", {:controller => 'subjects', :action => 'show', :id => book.id}, :class => 'action show') %>
+          <%= link_to("Edit",  {:controller => 'subjects', :action => 'edit', :id => book.id}, :class => 'action edit') %>
+          <%= link_to("Delete",  {:controller => 'subjects', :action => 'delete', :id => book.id}, :class => 'action delete') %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

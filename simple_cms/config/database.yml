@@ -48,5 +48,5 @@ production:
   <<: *default
   database: enigmatic-ridge-62507_production
   username: enigmatic-ridge-62507
-  password: <%= ENV['ENIGMATIC-RIDGE_DATABASE_PASSWORD'] %>
+  password: <%= ENV['ENIGMATIC-RIDGE-62507_DATABASE_PASSWORD'] %>
 
